@@ -1,0 +1,45 @@
+.nav-bar {
+    position: fixed;
+    top: 4px;
+    right: 4px;
+    left: 4px;
+    background: linear-gradient(-90deg, #84cf6a, #16c0b0);
+    height: 40px;
+    z-index: 10;
+}
+.nav-bar li {
+    font-size: 20px;
+    display:  inline-block;
+    zoom: auto;
+    margin-top: 5px;
+    margin-right: 20px;   
+    padding: 3px;
+}
+.banner{
+      color: blanchedalmond;
+}
+.item {
+      color: rgb(35, 54, 3);
+      border: 1px solid blanchedalmond;
+}
+.item:hover {
+      border: 1px solid red;
+      cursor: pointer;
+}
+.item-right {
+      padding: 4px;
+      float: right;
+      color: rgb(35, 54, 3);
+      border: 1px solid rgb(36, 27, 13);
+}
+.item-right:hover {
+      border: 1px solid red;
+      cursor: pointer;
+}
+.chart {
+      margin-top: 20px;
+}
+.content {
+      position: relative;
+      top: 50px;
+}
