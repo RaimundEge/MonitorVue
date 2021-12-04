@@ -31,7 +31,9 @@
 }
 .item-right {
       padding: 4px;
-      float: right;
+      position: fixed;
+      top: 120px;
+      right: 4px;
       color: rgb(35, 54, 3);
       border: 1px solid rgb(36, 27, 13);
 }
@@ -45,6 +47,7 @@
 }
 .order {
       margin-right: 20px;
+      width: 450px;
 }
 .order:hover {
       background-color: rgb(241, 247, 240);
@@ -55,6 +58,7 @@
 }
 .credit {
       margin-right: 20px;
+      width: 450px;      
 }
 .credit:hover {
       background-color: rgb(241, 247, 240);
@@ -72,6 +76,9 @@
       grid-template-columns: 100px 300px;
 }
 .detail {
+      position: fixed;
+      top: 120px;
+      left: 500px;
       height: 200px;
       padding: 20px;
       background-color: rgb(247, 237, 237);
