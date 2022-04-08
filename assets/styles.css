@@ -1,14 +1,25 @@
+body {
+      background-color: #f2f2f2;
+      margin: 0px;
+      font-family: tahoma;
+      color: #282828;
+}
+#app {
+      max-width: 960px;
+      margin: auto;
+      background-color: #fafafa;
+      height: 500px;
+}
 .nav-bar {
-    position: fixed;
-    top: 4px;
-    right: 4px;
-    left: 4px;
-    background: linear-gradient(-90deg, #84cf6a, #16c0b0);
-    height: 40px;
-    z-index: 10;
+      margin: 0px;
+      -webkit-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+      -moz-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.57);
+      padding-left: 5px;
+      background: linear-gradient(-90deg, #84cf6a, #16c0b0);
 }
 .nav-bar li {
-    font-size: 20px;
+    font-size: 150%;
     display:  inline-block;
     zoom: auto;
     margin-top: 5px;
@@ -31,9 +42,11 @@
 }
 .item-right {
       padding: 4px;
-      position: fixed;
-      top: 120px;
-      right: 4px;
+      position: relative;
+      top: 10px;
+      left: 50%;
+      text-align: right;
+      width: 430px;
       color: rgb(35, 54, 3);
       border: 1px solid rgb(36, 27, 13);
 }
@@ -43,7 +56,7 @@
 }
 .content {
       position: relative;
-      top: 50px;
+      top: 10px;
 }
 .order {
       margin-right: 20px;
@@ -78,7 +91,7 @@
 .detail {
       position: fixed;
       top: 120px;
-      left: 500px;
+      left: 50%;
       height: 200px;
       padding: 20px;
       background-color: rgb(247, 237, 237);
