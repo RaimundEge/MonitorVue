@@ -4,94 +4,115 @@ body {
       font-family: tahoma;
       color: #282828;
 }
+
 #app {
       max-width: 960px;
       margin: auto;
       background-color: #fafafa;
-      height: 500px;
+      height: 95vh;
 }
+
 .nav-bar {
       margin: 0px;
       -webkit-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
       -moz-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
       box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.57);
       padding-left: 5px;
+      padding-bottom: 5px;
       background: linear-gradient(-90deg, #84cf6a, #16c0b0);
 }
+
 .nav-bar li {
-    font-size: 150%;
-    display:  inline-block;
-    zoom: auto;
-    margin-top: 5px;
-    margin-right: 20px;   
-    padding: 3px;
+      font-size: 150%;
+      display: inline-block;
+      zoom: auto;
+      margin-top: 5px;
+      margin-right: 20px;
+      padding: 3px;
 }
-.banner{
+
+.display {
+      display: flex;
+      flex-direction: row;
+      padding: 0 1rem;
+}
+
+.banner {
       color: blanchedalmond;
 }
+
 .item {
       color: rgb(35, 54, 3);
       border: 1px solid blanchedalmond;
 }
+
 .item:hover {
       border: 1px solid red;
       cursor: pointer;
 }
+
 .text-red {
       color: red;
 }
+
 .item-right {
+      margin: 15px 0;
       padding: 4px;
-      position: relative;
-      top: 10px;
-      left: 50%;
-      text-align: right;
-      width: 430px;
+      width: 400px;
+      display: flex;
+      justify-content: space-between;
       color: rgb(35, 54, 3);
       border: 1px solid rgb(36, 27, 13);
 }
+
 .item-right:hover {
       border: 1px solid red;
       cursor: pointer;
 }
+
 .content {
       position: relative;
       top: 10px;
 }
-.order {
+
+.left-list {
+      max-height: 80vh;
+      overflow: auto;
+      overflow-x: hidden;
       margin-right: 20px;
-      width: 450px;
+      background-color: rgb(250, 245, 245);
 }
+
 .order:hover {
       background-color: rgb(241, 247, 240);
 }
+
 .ordergrid {
       display: grid;
       grid-template-columns: 136px 190px 110px;
 }
-.credit {
-      margin-right: 20px;
-      width: 450px;      
-}
+
 .credit:hover {
       background-color: rgb(241, 247, 240);
 }
+
 .creditgrid {
       display: grid;
       grid-template-columns: 136px 160px 100px;
 }
+
 .displaygrid {
       display: grid;
       grid-template-columns: 420px 450px;
 }
+
 .detailgrid {
       display: grid;
       grid-template-columns: 100px 300px;
 }
+
 .detail {
-      position: fixed;
-      top: 120px;
-      left: 50%;
+      margin-top: 20px;
       height: 200px;
       padding: 20px;
       background-color: rgb(247, 237, 237);

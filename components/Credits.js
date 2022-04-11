@@ -2,31 +2,38 @@ app.component('credits', {
     template:
         /*html*/
         `<div class="display"> 
-            <div class="item-right">
-                <span v-if="!current">
-                    click on a credit transaction to see detail &nbsp;
-                </span>
-                <button @click="current=null;getCredits()">Update</button>
-            </div>
-            <h3>List of recent credit transactions:</h3>          
-            <div v-for="cr in data" class="creditgrid credit" v-on:click="current=cr" :class="{ 'text-red': cr==current }">
-                <div>{{ formatRelative(cr.timeStamp) }}</div>
-                <div>{{ formatSome(cr.name) }}</div>
-                <div>\${{ cr.amount }}</div>
-            </div>                                        
-            <div v-if="current" class="detail">
-            <strong>Transaction Detail:</strong><br>
-                <div v-for="key in Object.keys(current)">
-                    <div v-if="key!=='_id'">                     
-                        <div v-if="key=='timeStamp'" class="detailgrid">
-                            <div>{{ key }}:</div><div>{{ formatTime(current[key]) }}</div>
-                        </div>
-                        <div v-else class="detailgrid">
-                            <div>{{ key }}:</div><div>{{ current[key] }}</div>
-                        </div>
+            <div class="left">
+                <h3>List of recent credit transactions:</h3>  
+                <div class="left-list">        
+                    <div v-for="cr in data" class="creditgrid credit" v-on:click="current=cr" :class="{ 'text-red': cr==current }">
+                        <div>{{ formatRelative(cr.timeStamp) }}</div>
+                        <div>{{ formatSome(cr.name) }}</div>
+                        <div>\${{ cr.amount }}</div>
                     </div>
                 </div>
-            </div>           
+            </div>
+            <div class="right">
+                <div class="item-right">
+                    <div v-if="!current">
+                        click on a credit transaction to see detail
+                    </div> 
+                    &nbsp;
+                    <button @click="current=null;getCredits()">Update</button>
+                </div>                                        
+                <div v-if="current" class="detail">
+                <strong>Transaction Detail:</strong><br>
+                    <div v-for="key in Object.keys(current)">
+                        <div v-if="key!=='_id'">                     
+                            <div v-if="key=='timeStamp'" class="detailgrid">
+                                <div>{{ key }}:</div><div>{{ formatTime(current[key]) }}</div>
+                            </div>
+                            <div v-else class="detailgrid">
+                                <div>{{ key }}:</div><div>{{ current[key] }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>          
          </div>`,
     data() {
         return {
