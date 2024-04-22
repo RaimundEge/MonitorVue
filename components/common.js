@@ -16,8 +16,12 @@ app.mixin({
                 return this.formatTime(when)
             }
         },
-        formatSome: function(data) {          
-            return (data.length > 25)?(data.slice(0,24) + "..."):data
+        formatSome: function(data) {   
+            if (data == null) {
+                return ""
+            } else {      
+                return (data.length > 25)?(data.slice(0,24) + "..."):data
+            }
         },
         formatTime: function(when) {
             var d = new Date(when);
