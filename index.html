@@ -20,6 +20,8 @@
       <li class="banner">CSCI 467 Transaction Monitor</li>
       <li class="item" v-on:click="content='orders'" :class="{ 'text-red': content=='orders' }">Orders</li>
       <li class="item" v-on:click="content='credits'" :class="{ 'text-red': content=='credits' }">Credits</li>
+      <li>&nbsp;</li>
+      <li class="erroritem" v-on:click="content='errors'" :class="{ 'text-red': content=='errors' }">Errors</li>
     </div>
     <div class="content" v-if="content=='orders'">
       <orders></orders>
@@ -27,6 +29,9 @@
     <div class="content" v-if="content=='credits'">
       <credits></credits>
     </div> 
+    <div class="content" v-if="content=='errors'">
+      <errors></errors>
+    </div>
   </div>
 
   <!-- Create App -->
@@ -45,6 +50,7 @@
   <script src="./components/common.js"></script>
   <script src="./components/Orders.js"></script>
   <script src="./components/Credits.js"></script>
+  <script src="./components/Errors.js"></script>
   <!-- Mount App -->
   <script>
     const mountedApp = app.mount('#app')   

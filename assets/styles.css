@@ -51,6 +51,14 @@ body {
       cursor: pointer;
 }
 
+.erroritem {
+      font-size: smaller !important;
+}
+.erroritem:hover {
+      border: 1px solid red;
+      cursor: pointer;
+}
+
 .text-red {
       color: red;
 }
@@ -99,6 +107,11 @@ body {
 .creditgrid {
       display: grid;
       grid-template-columns: 136px 160px 100px;
+}
+
+.errorgrid {
+      display: grid;
+      grid-template-columns: 136px 260px;
 }
 
 .displaygrid {
